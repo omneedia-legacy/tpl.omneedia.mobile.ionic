@@ -1,6 +1,6 @@
 APP_NAMESPACE = Settings.NAMESPACE;
 LANGS = Settings.LANGS;
-IONIC_VER="2.0.0-beta.9";
+IONIC_VER="3.7.1";
 
 (function (global) {
   System.config({
@@ -24,18 +24,18 @@ IONIC_VER="2.0.0-beta.9";
       app: 'app',
 
       // angular bundles
-      '@angular/core': 'npm:@angular/core@4.1.2/bundles/core.umd.js',
-      '@angular/common': 'npm:@angular/common@4.1.2/bundles/common.umd.js',
-      '@angular/compiler': 'npm:@angular/compiler@4.1.2/bundles/compiler.umd.js',
-      '@angular/platform-browser': 'npm:@angular/platform-browser@4.1.2/bundles/platform-browser.umd.js',
-      '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic@4.1.2/bundles/platform-browser-dynamic.umd.js',
-      '@angular/http': 'npm:@angular/http@4.1.2/bundles/http.umd.js',
-      '@angular/forms': 'npm:@angular/forms@4.1.2/bundles/forms.umd.js',
+      '@angular/core': 'npm:@angular/core@4.4.3/bundles/core.umd.js',
+      '@angular/common': 'npm:@angular/common@4.4.3/bundles/common.umd.js',
+      '@angular/compiler': 'npm:@angular/compiler@4.4.3/bundles/compiler.umd.js',
+      '@angular/platform-browser': 'npm:@angular/platform-browser@4.4.3/bundles/platform-browser.umd.js',
+      '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic@4.4.3/bundles/platform-browser-dynamic.umd.js',
+      '@angular/http': 'npm:@angular/http@4.4.3/bundles/http.umd.js',
+      '@angular/forms': 'npm:@angular/forms@4.4.3/bundles/forms.umd.js',
   
-      'ionic-angular': 'npm:ionic-angular@3.2.1',
-      'rxjs': 'npm:rxjs@5.0.0-beta.12',
-      'ts': 'npm:plugin-typescript@5.2.7/lib/plugin.js',
-      'typescript': 'npm:typescript@2.0.7/lib/typescript.js',
+      'ionic-angular': 'npm:ionic-angular@3.7.1',
+      'rxjs': 'npm:rxjs@5.4.3',
+      'ts': 'npm:plugin-typescript@7.1.0/lib/plugin.js',
+      'typescript': 'npm:typescript@2.5.3/lib/typescript.js',
 
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -56,6 +56,7 @@ IONIC_VER="2.0.0-beta.9";
 })(this);
 
 function __loader__(i) {	
+	System.import('http://cdn.omneedia.com/omneedia/App@angular.js')
 	System.import('app/main.ts')
 };
 __loader__();
