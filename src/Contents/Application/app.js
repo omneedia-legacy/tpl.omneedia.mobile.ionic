@@ -31,7 +31,9 @@ IONIC_VER="3.7.1";
       '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic@4.4.3/bundles/platform-browser-dynamic.umd.js',
       '@angular/http': 'npm:@angular/http@4.4.3/bundles/http.umd.js',
       '@angular/forms': 'npm:@angular/forms@4.4.3/bundles/forms.umd.js',
-  
+  	  '@ionic/storage': 'npm:@ionic/storage@2.0.1/es2015/index.js',
+	  'localforage-cordovasqlitedriver': 'npm:localforage-cordovasqlitedriver@1.6.0/dist/localforage-cordovasqlitedriver.js',
+	  'localforage': 'npm:localforage@1.5.0/dist/localforage.js',
       'ionic-angular': 'npm:ionic-angular@3.7.1',
       'rxjs': 'npm:rxjs@5.4.3',
       'ts': 'npm:plugin-typescript@7.1.0/lib/plugin.js',

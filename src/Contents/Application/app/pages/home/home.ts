@@ -7,7 +7,7 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  appName = 'Ionic App';
+  appName = 'Hello World';
   
 
   constructor(public navController: NavController) { 
