@@ -1,7 +1,7 @@
 {
-    "namespace": "tpl.omneedia.ionic",
+    "namespace": "tpl.omneedia.mobile",
     "git": "",
-    "title": "tpl.omneedia.ionic",
+    "title": "tpl.omneedia.mobile",
     "description": "Package description goes here",
     "platform": "mobile",
     "uid": "311fb3be-ec51-499d-9539-e0aa50daeaf7",
@@ -65,15 +65,10 @@
         "file": "app.png"
     },
     "plugins": [
-        "org.apache.cordova.device"
+        "cordova-plugins-whitelist",
+		"cordova-plugins-statusbar"
     ],
     "server": {
         "port": 3000
-    },
-    "debug": {
-        "port": 8080
-    },
-    "livereload": {
-        "port": 3030
     }
 }
