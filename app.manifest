@@ -56,7 +56,7 @@
         "CMain"
     ],
     "db": [
-        "bpclight"
+
     ],
     "api": [
         "MyService"
