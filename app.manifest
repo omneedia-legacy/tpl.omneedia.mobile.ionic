@@ -1,18 +1,18 @@
 {
-    "namespace": "tpl.omneedia.mobile",
+    "namespace": "----",
     "git": "",
-    "title": "tpl.omneedia.mobile",
-    "description": "Package description goes here",
+    "title": "----",
+    "description": "---",
     "platform": "mobile",
-    "uid": "311fb3be-ec51-499d-9539-e0aa50daeaf7",
+    "uid": ""----",
     "version": "1.00",
     "build": "0",
-    "copyright": "Copyright (c) 2016 By OMNEEDIA",
-    "license": "BSD",
+    "copyright": ""----",
+    "license": "----",
     "author": {
-        "name": "XXX",
-        "mail": "xxx@xxx.com",
-        "twitter": "@xxx",
+        "name": "----",
+        "mail": "----@xxx.com",
+        "twitter": "@----",
         "web": "",
         "github": ""
     },
@@ -25,19 +25,24 @@
         "fr"
     ],
     "auth": [],
-	"bootstrap": "@angular",
+    "bootstrap": "@angular",
+    "paths": {
+        "@omneedia": "http://cdn.omneedia.com",
+        "@unpkg": "https://unpkg.com"
+    },    
     "frameworks": [
         {
             "name": "ionic",
             "type": "mobile",
             "version": "3.6.1",
             "src": [
-                "https://unpkg.com/core-js@2.4.1/client/shim.min.js",
-                "https://unpkg.com/zone.js@0.8.18?main=browser",
-                "https://unpkg.com/systemjs@0.19.40/dist/system.src.js"
+                "@omneedia/ajax/libs/socket.io/2.0.3/socket.io.js",
+                "@unpkg/core-js@2.4.1/client/shim.min.js",
+                "@unpkg/zone.js@0.8.18?main=browser",
+                "@unpkg/systemjs@0.19.40/dist/system.src.js"
             ],
             "res": [
-                "https://unpkg.com/ionic-angular@3.7.1/css/ionic.css"
+                "@unpkg/ionic-angular@3.7.1/css/ionic.css"
             ]
         },
         {
@@ -46,10 +51,12 @@
             "src": "https://code.jquery.com/jquery-{version}.js"
         }
     ],
-    "paths": {},
     "modules": [],
     "controllers": [
         "CMain"
+    ],
+    "db": [
+        "bpclight"
     ],
     "api": [
         "MyService"
@@ -61,12 +68,13 @@
     },
     "splashscreen": {
         "background": "#FFFFFF",
-        "color": "orange",
+        "color": "#DBD267",
         "file": "app.png"
     },
     "plugins": [
-        "cordova-plugins-whitelist",
-		"cordova-plugins-statusbar"
+        "cordova-plugin-whitelist",
+        "cordova-plugin-statusbar",
+		"cordova-plugin-globalization"
     ],
     "server": {
         "port": 3000

@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'app/pages/home/home.html'
+  templateUrl: 'home.html'
 })
 export class HomePage {
 
@@ -11,7 +11,7 @@ export class HomePage {
   
 
   constructor(public navController: NavController) { 
-  	App.onReady();
+
   }
 
 }

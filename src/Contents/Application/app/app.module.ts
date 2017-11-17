@@ -1,36 +1,52 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, enableProdMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { IonicApp, IonicPageModule, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
-import { AppComponent } from './app.component';
+import { MyApp } from './app.component';
 
-import { HomePage } from './pages/home/home';
+import { HomePage } from '../pages/home/home';
 
-@NgModule({
-  	imports: [ 	
-		IonicModule.forRoot(AppComponent),
-  		BrowserModule
-	],
-  	declarations: [ 
-		AppComponent, 
-		HomePage 
-	],
-  	entryComponents: [ 
-		HomePage 
-	],
-  	providers: [
-    	{provide: ErrorHandler, useClass: IonicErrorHandler}
-    ],
-  	bootstrap: [ IonicApp ]
-})
+import { StatusBar } from '@ionic-native/status-bar';
 
-export class AppModule { 
+import { Globalization } from '@ionic-native/globalization';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+enableProdMode();
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
+@NgModule({
+  declarations: [
+    MyApp,
+    HomePage
+  ],
+  imports: [
+    BrowserModule,
+	HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
+    IonicModule.forRoot(MyApp),
+	IonicPageModule.forChild(HomePage)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+  HomePage 
+  ],
+  providers: [
+    StatusBar,
+	Globalization,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
+})
+
+
+export class AppModule {}
