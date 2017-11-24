@@ -42,7 +42,7 @@
                 "@unpkg/systemjs@0.19.40/dist/system.src.js"
             ],
             "res": [
-                "@unpkg/ionic-angular@3.7.1/css/ionic.css"
+                "/main.css"
             ]
         },
         {
