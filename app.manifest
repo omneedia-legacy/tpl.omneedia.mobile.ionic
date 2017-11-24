@@ -34,7 +34,6 @@
         {
             "name": "ionic",
             "type": "mobile",
-            "version": "3.6.1",
             "src": [
                 "@omneedia/ajax/libs/socket.io/2.0.3/socket.io.js",
                 "@unpkg/core-js@2.4.1/client/shim.min.js",
