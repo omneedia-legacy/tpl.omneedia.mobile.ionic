@@ -2,7 +2,7 @@ APP_NAMESPACE = Settings.NAMESPACE;
 LANGS = Settings.LANGS;
 IONIC_VER = "3.7.1";
 ANGULAR_VER = "4.4.3";
-RXJS_VER = "5.4.3";
+RXJS_VER = "5.5.2";
 
 (function(global) {
     System.config({
